@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="hoa/hoa.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="hoa/Binaural.cs">
+    <Files>
+      <File FileName="hoa/Hrir.cs" Line="14" Column="36" />
+      <File FileName="hoa/Binaural.cs" Line="29" Column="68" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

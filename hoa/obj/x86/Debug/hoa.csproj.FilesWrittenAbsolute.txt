@@ -1,0 +1,5 @@
+/Users/miguelrfelix/Documents/mono/hoa/hoa/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/miguelrfelix/Documents/mono/hoa/hoa/bin/Debug/hoa.exe.mdb
+/Users/miguelrfelix/Documents/mono/hoa/hoa/bin/Debug/hoa.exe
+/Users/miguelrfelix/Documents/mono/hoa/hoa/obj/x86/Debug/hoa.exe
+/Users/miguelrfelix/Documents/mono/hoa/hoa/obj/x86/Debug/hoa.exe.mdb

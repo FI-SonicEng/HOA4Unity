@@ -12,8 +12,8 @@ This project is a C# Library for decoding/auralizing audio material recorded in 
 
 ## Motivation
 
-3D Surround Audio in conjunction to Stereoscopic 3D Video are the most important aspects to create a compelling VR experience to the user.
-This is where Ambisonics comes in. Instead of relying on pre-processed audio or virtualized sound sources, the user can capture directly the soundspace and transpose that to the VR World, changing the location of these sources relative to it's head.
+3D Surround Audio in conjunction to Stereoscopic 3D Video are the most important aspects to create a compelling VR experience to the user.<br>
+This is where Ambisonics comes in. Instead of relying on pre-processed audio or virtualized sound sources, the user can capture directly the soundspace and transpose that to the VR World, changing the location of these sources relative to it's head.<br>
 HOA4Unity combines the excellent results of Ambisonic recordings, binaural encoding and Unity to create the most realistic sonic experience to the user.
 
 ## Installation
@@ -27,13 +27,18 @@ The complete class and method references can be read here:
 
 ## Contributors
 
-Miguel Félix  - miguel.felix@fi-sonic.com
-[LinkedIn](https://www.linkedin.com/in/miguelrfelix) - [Facebook](https://www.facebook.com/miguelrfelix)
+Miguel Félix:<br>
+[Email](mailto:miguel.felix@fi-sonic.com)<br>
+[LinkedIn](https://www.linkedin.com/in/miguelrfelix)<br>
+[Facebook](https://www.facebook.com/miguelrfelix)
+
+## Acknowledgements
+
+Kind regards to [CICM - Centre de recherche Informatique et Création Musicale](http://cicm.mshparisnord.org) for releasing [HOALibrary](https://github.com/CICM/HoaLibrary-Light) which is the library this project was based on and [Fi-Sonic](http://www.fi-sonic.com) for the resources and expertise in 3D Audio. 
 
 ## License
 
-GNU GENERAL PUBLIC LICENSE V3
-Copyright © 2007 Free Software Foundation, Inc.
+HOA4Unity is released under the GNU GENERAL PUBLIC LICENSE V3<br>
 
 ```
 This program is free software: you can redistribute it and/or modify

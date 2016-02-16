@@ -7,7 +7,7 @@ This project is a C# Library for decoding/auralizing audio material recorded in 
 
 ## Usage Examples
 
-~Code~
+~Code~<br>
 ~GIF~
 
 ## Motivation
@@ -22,13 +22,12 @@ HOA4Unity combines the excellent results of Ambisonic recordings, binaural encod
 
 ## API Reference
 
-The complete class and method references can be read here:
+The complete class and method reference can be read here:
 [Documentation](https://rawgit.com/FI-SonicEng/HOA4Unity/master/documentation/html/index.html)
 
 ## Contributors
 
-Miguel Félix:<br>
-[Email](mailto:miguel.felix@fi-sonic.com)<br>
+Miguel Félix - [Contact me](mailto:miguel.felix@fi-sonic.com?subject=Informations)<br>
 [LinkedIn](https://www.linkedin.com/in/miguelrfelix)<br>
 [Facebook](https://www.facebook.com/miguelrfelix)
 

@@ -5,7 +5,7 @@ High Order Ambisonics Layer For Unity
 
 This project is a C# Library for decoding/auralizing audio material recorded in Ambisonic (B-Format) inside Unity.
 
-## Usage Examples
+## Application Examples
 
 ~Code~<br>
 ~GIF~
@@ -33,7 +33,7 @@ Miguel Félix - [Contact me](mailto:miguel.felix@fi-sonic.com?subject=Informatio
 
 ## Acknowledgements
 
-Kind regards to [CICM - Centre de recherche Informatique et Création Musicale](http://cicm.mshparisnord.org) for releasing [HOALibrary](https://github.com/CICM/HoaLibrary-Light) which is the library this project was based on and [Fi-Sonic](http://www.fi-sonic.com) for the resources and expertise in 3D Audio. 
+Kind regards to [CICM - Centre de recherche Informatique et Création Musicale](http://cicm.mshparisnord.org) for releasing [HOALibrary](https://github.com/CICM/HoaLibrary-Light) which is the library this project was based on and my mother for baking yummy cakes, the fuel for this project.
 
 ## License
 

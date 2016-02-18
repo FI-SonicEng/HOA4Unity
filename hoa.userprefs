@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="hoa/hoa.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="hoa/Binaural.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="hoa/Hrir.cs">
     <Files>
-      <File FileName="hoa/Hrir.cs" Line="14" Column="36" />
-      <File FileName="hoa/Binaural.cs" Line="29" Column="68" />
+      <File FileName="hoa/Maths.cs" Line="20" Column="14" />
+      <File FileName="hoa/Hrir.cs" Line="73" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

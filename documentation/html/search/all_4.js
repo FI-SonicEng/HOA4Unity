@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainclass',['MainClass',['../classhoa_1_1_main_class.html',1,'hoa']]]
+  ['signal',['Signal',['../classhoa_1_1_signal.html',1,'hoa']]]
 ];

@@ -71,36 +71,36 @@ namespace hoa
 		/// Get the HRIR matrix for the left ear.
 		/// </summary>
 		/// <returns>The HRIR matrix for the left ear (float type).</returns>
-		public static float getLeftMatrix ()
+		public static float[] getLeftMatrixFloat ()
 		{
-			return Irc1002C_float_3d_left;
+			return HrirIrc.Irc1002C_float_3d_left;
 		}
 
 		/// <summary>
 		/// Get the HRIR matrix for the right ear.
 		/// </summary>
 		/// <returns>The HRIR matrix for the right ear (float type).</returns>
-		public static float getRightMatrix ()
+		public static float[] getRightMatrixFloat ()
 		{
-			return Irc1002C_float_3d_right;
+			return HrirIrc.Irc1002C_float_3d_right;
 		}
 
 		/// <summary>
 		/// Get the HRIR matrix for the left ear.
 		/// </summary>
 		/// <returns>The HRIR matrix for the left ear (double type).</returns>
-		public static double getLeftMatrix ()
+		public static double[] getLeftMatrixDouble ()
 		{
-			return Irc1002C_double_3d_left;
+			return HrirIrc.Irc1002C_double_3d_left;
 		}
 
 		/// <summary>
 		/// Get the HRIR matrix for the right ear.
 		/// </summary>
 		/// <returns>The HRIR matrix for the right ear (double type).</returns>
-		public static double getRightMatrix ()
+		public static double[] getRightMatrixDouble ()
 		{
-			return Irc1002C_double_3d_right;
+			return HrirIrc.Irc1002C_double_3d_right;
 		}
 	}
 }

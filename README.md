@@ -1,6 +1,8 @@
 # HOA4Unity
 High Order Ambisonics Layer For Unity
 
+Keywords: Ambisonics, 3D Audio, Unity, Virtual Reality
+
 ## Synopsis
 
 This project is a C# Library for decoding/auralizing audio material recorded in Ambisonic (B-Format) inside Unity.
@@ -27,7 +29,7 @@ The complete class and method reference can be read here:
 
 ## Contributors
 
-Miguel Félix - [Contact me](mailto:miguel.felix@fi-sonic.com?subject=Informations)<br>
+Miguel Félix - miguel.felix<span style="display:none">foo</span>@fi-sonic.com<br>
 [LinkedIn](https://www.linkedin.com/in/miguelrfelix)<br>
 [Facebook](https://www.facebook.com/miguelrfelix)
 

@@ -35,10 +35,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Binaural.cs" />
-    <Compile Include="Decoder.cs" />
     <Compile Include="Hrir.cs" />
-    <Compile Include="HrirIrc1002C3D.cs" />
+    <Compile Include="Harmonics.cs" />
+    <Compile Include="Planewaves.cs" />
+    <Compile Include="Signal.cs" />
+    <Compile Include="Maths.cs" />
+    <Compile Include="HrirIrc.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

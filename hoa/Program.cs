@@ -7,9 +7,7 @@ namespace hoa
 	{
 		public static void Main (string[] args)
 		{
-			var decoder = new decoder(1, 4);
-			Console.WriteLine (decoder.getorder ());
-			Console.WriteLine(decoder.getnumberOfPlanewaves ());
+		Console.WriteLine (Maths<Int32>.clip (0, 1, 2));
 		}
 	}
 }

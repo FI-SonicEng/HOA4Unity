@@ -29,7 +29,7 @@ The complete class and method reference can be read here:
 
 ## Contributors
 
-Miguel Félix - miguel.felix<span style="display:none">foo</span>@fi-sonic.com<br>
+Miguel Félix - miguel.<span style="display:none">felix</span>@fi-sonic.com<br>
 [LinkedIn](https://www.linkedin.com/in/miguelrfelix)<br>
 [Facebook](https://www.facebook.com/miguelrfelix)
 

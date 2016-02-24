@@ -25,7 +25,7 @@ HOA4Unity combines the excellent results of Ambisonic recordings, binaural encod
 ## API Reference
 
 The complete class and method reference can be read here:
-[Documentation](https://rawgit.com/FI-SonicEng/HOA4Unity/master/documentation/html/index.html)
+[Documentation](http://fi-sonic.com/HOA4Unity/documentation/html/index.html)
 
 ## Contributors
 

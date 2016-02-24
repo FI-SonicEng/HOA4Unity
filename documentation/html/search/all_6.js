@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['order',['order',['../classhoa_1_1_decoder.html#a95e4355ed6b419e710f5f4f5bd315fc2',1,'hoa::Decoder']]]
+  ['mainclass',['MainClass',['../classhoa_1_1_main_class.html',1,'hoa']]],
+  ['maths',['Maths',['../classhoa_1_1_maths.html',1,'hoa']]]
 ];

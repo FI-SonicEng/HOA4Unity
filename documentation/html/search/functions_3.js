@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['process',['process',['../classhoa_1_1_decoder.html#a37096401859a1d546eca40e25a4c32ed',1,'hoa::Decoder']]]
+  ['factorial',['factorial',['../classhoa_1_1_maths.html#a437601e77a6e1ecde5f264a89e5b4127',1,'hoa::Maths']]]
 ];

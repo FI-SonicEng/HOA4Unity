@@ -18,11 +18,19 @@
 // along with HOA4Unity.  If not, see <http://www.gnu.org/licenses/>.
 // =======================================================================
 using System;
-using System.Collections.Generic;
 
 namespace hoa
 {
-	public class Maths<T> where T : IComparable
+	/// <summary>
+	/// The Maths class owns a set of useful static methods.
+	/// </summary>
+	/// <remarks>
+	/// The Maths class owns a set of useful static methods to clip and wrap 
+	/// angles and to convert coordinates from cartesian to spherical or 
+	/// from spherical to cartesian with the \f$\frac{\pi}{2}\f$ 
+	/// offset special feature.
+	/// </remarks>
+	public class Maths
 	{
 		const double HOA_PI = 3.14159265358979323846264338327950288;
 		const double HOA_2PI = 6.283185307179586476925286766559005;
@@ -30,81 +38,189 @@ namespace hoa
 		const double HOA_PI4 = 0.785398163397448309615660845819875721;
 		const double HOA_EPSILON = 1e-6;
 
-		public static T ConvertVal (double value)
+		/// <summary>
+		/// The clipping function.
+		/// </summary>
+		/// <remarks>
+		/// The function clips a number between boundaries.
+		/// </remarks>
+		/// <param name="n">The value to clip.</param>
+		/// <param name="lower">The low boundary.</param>
+		/// <param name="upper">The high boundary.</param>
+		/// <returns>The function return the clipped value.</returns>
+		public static double clip (double n, double lower, double upper)
 		{
-			return (T)Convert.ChangeType (value, typeof(T));
+			return Math.Max(lower, Math.Min(n, upper));
 		}
 
-		public static T clip (T n, T lower, T upper)
+		/// <summary>
+		/// The wrapping function between  \f$0\f$ and \f$2\pi\f$.
+		/// </summary>
+		/// <remarks>
+		/// The function wraps a number between \f$0\f$ and \f$2\pi\f$.
+		/// </remarks>
+		/// <param name="value">The value to wrap.</param>
+		/// <returns>The function return the wrapped value.</returns>
+		public static double wrap_twopi(double value)
 		{
-			T min = (n.CompareTo (upper) < 0) ? n : upper;
-			T max = (lower.CompareTo (min) > 0) ? lower : min;
-			return max;
-		}
-
-		public static T wrap_twopi (T value)
-		{
-			while (new_value.CompareTo (0) < 0) {
-				new_value += ConvertVal (HOA_2PI);
+			double new_value = value;
+			while(new_value < 0f)
+			{
+				new_value += HOA_2PI;
 			}
-			while (new_value >= ConvertVal (HOA_2PI)) {
-				new_value -= ConvertVal (HOA_2PI);
+			while(new_value >= HOA_2PI)
+			{
+				new_value -= HOA_2PI;
 			}
 			return new_value;
 		}
 
-		public static T wrap_pi (T value)
+		/// <summary>
+		/// The wrapping function between  \f$0\f$ and \f$\pi\f$.
+		/// </summary>
+		/// <remarks>
+		/// The function wraps a number between \f$0\f$ and \f$\pi\f$.
+		/// </remarks>
+		/// <param name="value">The value to wrap.</param>
+		/// <returns>The function return the wrapped value.</returns>
+		public static double wrap_pi(double value)
 		{
-			T new_value = value;
-			while (new_value < -HOA_PI) {
-				new_value += (T)HOA_2PI;
+			double new_value = value;
+			while(new_value < -HOA_PI)
+			{
+				new_value += HOA_2PI;
 			}
-			while (new_value >= HOA_PI) {
-				new_value -= (T)HOA_2PI;
+			while(new_value >= HOA_PI)
+			{
+				new_value -= HOA_2PI;
 			}
 			return new_value;
 		}
 
-		public static T abscissa (T radius, T azimuth, T elevation)
+		/// <summary>
+		/// The abscissa converter function.
+		/// </summary>
+		/// <remarks>
+		/// This function takes the radius \f$\rho\f$, the azimuth 
+		/// \f$\theta\f$ and the elevation \f$\varphi\f$ of a point 
+		/// and retrieves the abscissa \f$x\f$.
+		/// \f[x = \rho \cdot cos{\left(\theta + \frac{\pi}{2}\right)} \cdot 
+		/// cos{(\varphi)} \f]
+		/// </remarks>
+		/// <param name="radius">The radius.</param>
+		/// <param name="azimuth">The azimuth.</param>
+		/// <param name="elevation">The elevation.</param>
+		/// <returns>The abscissa.</returns>
+		public static double abscissa (double radius, double azimuth, double elevation)
 		{
-			elevation = 0;
 			return radius * Math.Cos (azimuth + HOA_PI2) * Math.Cos (0);
 		}
 
-		public static T ordinate (T radius, T azimuth, T elevation)
+		/// <summary>
+		/// The ordinate converter function.
+		/// </summary>
+		/// <remarks>
+		/// This function takes the radius \f$\rho\f$, the azimuth 
+		/// \f$\theta\f$ and the elevation \f$\varphi\f$ of a point 
+		/// and retrieves the ordinate \f$y\f$.
+		/// \f[y = \rho \cdot sin{\left(\theta + \frac{\pi}{2}\right)} \cdot 
+		/// cos{(\varphi)} \f]
+		/// </remarks>
+		/// <param name="radius">The radius.</param>
+		/// <param name="azimuth">The azimuth.</param>
+		/// <param name="elevation">The elevation.</param>
+		/// <returns>The ordinate.</returns>
+		public static double ordinate (double radius, double azimuth, double elevation)
 		{
-			elevation = (T)0;
 			return radius * Math.Sin (azimuth + HOA_PI2) * Math.Cos (elevation);
 		}
 
-		public static T height (T radius, T azimuth, T elevation)
+		/// <summary>
+		/// The height converter function.
+		/// </summary>
+		/// <remarks>
+		/// This function takes the radius \f$\rho\f$, the azimuth 
+		/// \f$\theta\f$ and the elevation \f$\varphi\f$ of a point 
+		/// and retrieves the height \f$h\f$.
+		/// \f[h = \rho \cdot sin{(\varphi)} \f]
+		/// </remarks>
+		/// <param name="radius">The radius.</param>
+		/// <param name="azimuth">The azimuth.</param>
+		/// <param name="elevation">The elevation.</param>
+		/// <returns>The height.</returns>
+		public static double height (double radius, double azimuth, double elevation)
 		{
-			elevation = 0;
 			return radius * Math.Sin (elevation);
 		}
 
-		public static T radius (T x, T y, T z)
+		/// <summary>
+		/// The radius converter function.
+		/// </summary>
+		/// <remarks>
+		/// This function takes the abscissa \f$x\f$, the ordinate 
+		/// \f$y\f$ and the height \f$z\f$ of a point and retrieves 
+		/// the radius \f$\rho\f$.
+		/// \f[\rho = \sqrt{x^2 + y^2 +z^2} \f]
+		/// </remarks>
+		/// <param name="x">The abscissa.</param>
+		/// <param name="y">The ordinate.</param>
+		/// <param name="z">The height.</param>
+		/// <returns>The radius.</returns>
+		public static double radius (double x, double y, double z)
 		{
-			z = 0;
 			return Math.Sqrt (x * x + y * y + z * z);
 		}
 
-		public static T azimuth (T x, T y, T z)
+		/// <summary>
+		/// The azimuth converter function.
+		/// </summary>
+		/// <remarks>
+		/// This function takes the abscissa \f$x\f$, the ordinate 
+		/// \f$y\f$ and the height \f$z\f$ of a point and retrieves 
+		/// the azimuth \f$\theta\f$.
+		/// \f[\theta = \arctan{\left(\frac{y}{x}\right)} - \frac{\pi}{2} \f]
+		/// </remarks>
+		/// <param name="x">The abscissa.</param>
+		/// <param name="y">The ordinate.</param>
+		/// <param name="z">The height.</param>
+		/// <returns>The azimuth.</returns>
+		public static double azimuth (double x, double y, double z)
 		{
-			z = 0;
 			if (x == 0 && y == 0)
 				return 0;
 			return Math.Atan2 (y, x) - HOA_PI2;
 		}
 
-		public static T elevation (T x, T y, T z)
+		/// <summary>
+		/// The elevation converter function.
+		/// </summary>
+		/// <remarks>
+		/// This function takes the abscissa \f$x\f$, the ordinate 
+		/// \f$y\f$ and the height \f$z\f$ of a point and retrieves 
+		/// the elevation \f$\varphi\f$.
+		/// \f[\varphi = \arcsin{\left(\frac{z}{\sqrt{x^2 + y^2 +z^2}}\right)} \f]
+		/// </remarks>
+		/// <param name="x">The abscissa.</param>
+		/// <param name="y">The ordinate.</param>
+		/// <param name="z">The height.</param>
+		/// <returns>The elevation.</returns>
+		public static double elevation (double x, double y, double z)
 		{
-			z = 0;
 			if (z == 0)
 				return 0;
 			return Math.Asin (z / Math.Sqrt (x * x + y * y + z * z));
 		}
 
+		/// <summary>
+		/// The factorial.
+		/// </summary>
+		/// <remarks>
+		/// The function computes the factorial, the product of all 
+		/// positive integers less than or equal to an integer.
+		/// \f[n! = \prod_{1 \leq i \leq n} i = 1 \cdot 2 \cdot {...} \cdot (n - 1) \cdot n \f]
+		/// </remarks>
+		/// <param name="n">The integer.</param>
+		/// <returns>The function return the factorial of n.</returns>
 		public static double factorial (long n)
 		{
 			double result = n;

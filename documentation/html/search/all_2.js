@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mainclass',['MainClass',['../classhoa_1_1_main_class.html',1,'hoa']]],
-  ['maths',['Maths',['../classhoa_1_1_maths.html',1,'hoa']]]
+  ['elevation',['elevation',['../classhoa_1_1_maths.html#a055b5412bccdf6a517aae374e8c90528',1,'hoa::Maths']]]
 ];

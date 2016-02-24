@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -147,7 +153,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classhoa_1_1_hrir.html" title="The Hrir class gives the impulse responses to decode in binaural mode. ">Hrir</a> class gives the impulse responses to decode in binaural mode. </p>
 <p>The impulse response can be simple or double precision. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aefe7823ebb9d1ae39932ac1c2a0e9d6a"></a>
+<a class="anchor" id="acde42d42e76507bfd7c8273ced326c5c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -155,7 +161,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static double [] hoa.Hrir.getLeftMatrixDouble </td>
+          <td class="memname">static ulong hoa.Hrir.getOrderOfDecomposition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -168,86 +174,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the HRIR matrix for the left ear. </p>
-<dl class="section return"><dt>Returns</dt><dd>The HRIR matrix for the left ear (double type).</dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a0fdf8295a5cb8520f9fd7d48982b5524"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static float [] hoa.Hrir.getLeftMatrixFloat </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the HRIR matrix for the left ear. </p>
-<dl class="section return"><dt>Returns</dt><dd>The HRIR matrix for the left ear (float type).</dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a82872d4b1a928958429264913f4d65b7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static ulong hoa.Hrir.getMatricesSize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the size of the matrices (rows * columns). </p>
-<dl class="section return"><dt>Returns</dt><dd>The matrices size.</dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a60d574a98d6e4e70eb90dac05110d80c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static ulong hoa.Hrir.getNumberOfColumns </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the number columns of the matrices (the number of harmonics used to compute the matrices). </p>
-<dl class="section return"><dt>Returns</dt><dd>The number of columns.</dd></dl>
+<p>Gets the order of decomposition used to compute the matrices. </p>
+<dl class="section return"><dt>Returns</dt><dd>The order of decomposition.</dd></dl>
 
 </div>
 </div>
@@ -277,7 +205,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acde42d42e76507bfd7c8273ced326c5c"></a>
+<a class="anchor" id="a60d574a98d6e4e70eb90dac05110d80c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -285,7 +213,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static ulong hoa.Hrir.getOrderOfDecomposition </td>
+          <td class="memname">static ulong hoa.Hrir.getNumberOfColumns </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -298,12 +226,12 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the order of decomposition used to compute the matrices. </p>
-<dl class="section return"><dt>Returns</dt><dd>The order of decomposition.</dd></dl>
+<p>Gets the number columns of the matrices (the number of harmonics used to compute the matrices). </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of columns.</dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a492913c03a46facc9476df2ad335c2bd"></a>
+<a class="anchor" id="a82872d4b1a928958429264913f4d65b7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -311,7 +239,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static double [] hoa.Hrir.getRightMatrixDouble </td>
+          <td class="memname">static ulong hoa.Hrir.getMatricesSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -324,8 +252,34 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the HRIR matrix for the right ear. </p>
-<dl class="section return"><dt>Returns</dt><dd>The HRIR matrix for the right ear (double type).</dd></dl>
+<p>Gets the size of the matrices (rows * columns). </p>
+<dl class="section return"><dt>Returns</dt><dd>The matrices size.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0fdf8295a5cb8520f9fd7d48982b5524"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float [] hoa.Hrir.getLeftMatrixFloat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the HRIR matrix for the left ear. </p>
+<dl class="section return"><dt>Returns</dt><dd>The HRIR matrix for the left ear (float type).</dd></dl>
 
 </div>
 </div>
@@ -355,8 +309,60 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aefe7823ebb9d1ae39932ac1c2a0e9d6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double [] hoa.Hrir.getLeftMatrixDouble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the HRIR matrix for the left ear. </p>
+<dl class="section return"><dt>Returns</dt><dd>The HRIR matrix for the left ear (double type).</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a492913c03a46facc9476df2ad335c2bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double [] hoa.Hrir.getRightMatrixDouble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the HRIR matrix for the right ear. </p>
+<dl class="section return"><dt>Returns</dt><dd>The HRIR matrix for the right ear (double type).</dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Hrir.cs</li>
+<li>HOA4Unity/hoa/Hrir.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
